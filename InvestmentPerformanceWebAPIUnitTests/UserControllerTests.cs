@@ -39,7 +39,6 @@ namespace InvestmentPerformanceWebAPIUnitTests
                 Id = 1,
                 Username = "testuser",
                 Email = "test@example.com",
-                PasswordHash = "hashedpassword",
                 Transactions = new List<Transaction>
                 {
                     new Transaction
@@ -152,7 +151,6 @@ namespace InvestmentPerformanceWebAPIUnitTests
                 Id = 3,
                 Username = "calculationtest",
                 Email = "calc@test.com",
-                PasswordHash = "hash",
                 Transactions = new List<Transaction>
                 {
                     new Transaction
@@ -196,7 +194,6 @@ namespace InvestmentPerformanceWebAPIUnitTests
                 Id = 4,
                 Username = "lossuser",
                 Email = "loss@example.com",
-                PasswordHash = "hash",
                 Transactions = new List<Transaction>
                 {
                     new Transaction

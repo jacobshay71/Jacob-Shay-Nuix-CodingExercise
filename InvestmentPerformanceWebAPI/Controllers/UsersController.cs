@@ -20,6 +20,25 @@ namespace InvestmentPerformanceWebAPI.Controllers
         }
 
         [HttpGet]
+        public IActionResult GetUsers()
+        {
+            var users = _context.Users.Select(u => new UserDTO()
+            {
+                Id = u.Id,
+                Username = u.Username
+            });
+            if (users == null)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                return Ok(users);
+            }
+        }
+
+
+        [HttpGet]
         [Route("{id}")]
         public IActionResult GetUser(int id)
         {

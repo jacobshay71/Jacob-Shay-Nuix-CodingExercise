@@ -31,7 +31,6 @@ namespace InvestmentPerformanceWebAPI.Database
                     Id = 1, // primary key
                     Username = "testaccount",
                     Email = "testaccount@test.com",
-                    PasswordHash = "AQAAAAIAAYagAAAAEL063horo+HRrTdEbV+L5+8GocegjOlb6XzR0aAzFkKOYs3XFHKtVv2VP9cqng4cwQ==",
                 }
             );
 
