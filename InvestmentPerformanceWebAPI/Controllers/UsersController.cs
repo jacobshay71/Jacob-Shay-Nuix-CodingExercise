@@ -1,4 +1,5 @@
 ﻿using InvestmentPerformanceWebAPI.Database;
+using InvestmentPerformanceWebAPI.DataTransferObjects;
 using InvestmentPerformanceWebAPI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +23,22 @@ namespace InvestmentPerformanceWebAPI.Controllers
         [Route("{id}")]
         public IActionResult GetUser(int id)
         {
-            var user = _context.Users.Include("Transactions").FirstOrDefault(u => u.Id == id);
+            var user = _context.Users.Include("Transactions").Where(u => u.Id == id).Select(u => new UserDTO()
+            {
+                Id = u.Id,
+                Username = u.Username,
+                Transactions = u.Transactions.Select(t => new TransactionDetailsDTO()
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    Shares = t.Quantity,
+                    TransactionTime = t.TransactionTime,
+                    CostBasisPerShare = t.SharePriceAtPurchase,
+                    CurrentValue = t.CurrentSharePrice * t.Quantity,
+                    CurrentPrice = t.CurrentSharePrice,
+                    TotalGain = (t.CurrentSharePrice * t.Quantity) - (t.SharePriceAtPurchase * t.Quantity)
+                }).ToList()
+            });
 
             if (user == null)
             {
