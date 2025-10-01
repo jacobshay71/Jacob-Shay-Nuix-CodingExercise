@@ -16,10 +16,15 @@ namespace InvestmentPerformanceWebAPI.Database
         {
         }
 
+        /// <summary>
+        /// Overriding OnModelCreating to seed initial data into the database.
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
+            // Add users
             modelBuilder.Entity<User>().HasData(
                 new User
                 {
@@ -30,6 +35,7 @@ namespace InvestmentPerformanceWebAPI.Database
                 }
             );
 
+            // Add transactions for user with UserId = 1
             modelBuilder.Entity<Transaction>().HasData(
                 
                 new Transaction
