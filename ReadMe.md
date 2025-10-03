@@ -1,3 +1,21 @@
+# Executing the code
+
+Open "InvestmentPerformanceWebAPI.sln"
+
+You can build and run the code in visual studio or by the .exe in the bin/debug / bin/release folder.
+
+It will open up the browser and go to the swagger rest api. You can then hit the end points there in order to test the uesr stories.
+
+The url for swagger that opens up should be https://localhost:7005/index.html
+
+# Assumptions Made
+
+- Populated some data with a simple sql lite database using C# entity framework code first. I know in a real world example there would be data already there, or technically we could have used a third party API to pull stock information, but felt that was to easy to do.
+
+- There is currently one user (id: 1)
+
+- Five transactions for that user. (id: 1-5)
+
 # Coding Exercise
 > This repository holds coding exercises for candidates going through the hiring process.
 

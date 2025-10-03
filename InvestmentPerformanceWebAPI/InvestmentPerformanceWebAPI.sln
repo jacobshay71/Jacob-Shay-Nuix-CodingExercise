@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformanceWebAPI", "InvestmentPerformanceWebAPI.csproj", "{92148044-E466-4A89-A432-C209C392EDBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformanceWebAPIUnitTests", "..\InvestmentPerformanceWebAPIUnitTests\InvestmentPerformanceWebAPIUnitTests.csproj", "{32836670-B007-45F2-8872-F6C8FB9E3253}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92148044-E466-4A89-A432-C209C392EDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92148044-E466-4A89-A432-C209C392EDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92148044-E466-4A89-A432-C209C392EDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92148044-E466-4A89-A432-C209C392EDBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32836670-B007-45F2-8872-F6C8FB9E3253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32836670-B007-45F2-8872-F6C8FB9E3253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32836670-B007-45F2-8872-F6C8FB9E3253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32836670-B007-45F2-8872-F6C8FB9E3253}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF7C718A-700A-4E94-AAA5-D59FDFABC2F9}
+	EndGlobalSection
+EndGlobal
